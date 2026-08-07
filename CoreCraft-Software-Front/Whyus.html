@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — ทำไมต้องเลือกเรา (Why Partner With Us)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="Home.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30">C</div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
+          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="Home.html" class="hover:text-slate-900 transition-colors">หน้าหลัก (Home)</a>
+        <a href="Whyus.html" class="text-brand-500 font-semibold">ทำไมต้องเลือกเรา (Why Us)</a>
+        <a href="Home.html#services" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
+        <a href="Home.html#cases" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
+        <a href="Home.html#team" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="Home.html#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 text-white font-medium text-sm">ติดต่อปรึกษาโซลูชัน</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-grow">
+    <section class="py-16 lg:py-20 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-semibold">
+          🏆 Mission-Critical Engineering Standards
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          ทำไมองค์กรใหญ่ระดับประเทศ <br/><span class="text-brand-500">ไว้วางใจเลือก CoreCraft Software</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+          เราไม่ได้เพียงแค่เขียนโค้ด แต่เราวางสถาปัตยกรรมระดับ Mission-Critical ที่ยึดถือมาตรฐาน Zero Downtime และ Bank-Grade Security
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY STATS & METRICS -->
+    <section class="py-12 bg-darknavy-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-500">99.999%</div>
+          <div class="text-xs text-slate-400 font-medium">Uptime SLA Guarantee</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">&lt; 50 ms</div>
+          <div class="text-xs text-slate-400 font-medium">Payment Switch Latency</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">14,000+</div>
+          <div class="text-xs text-slate-400 font-medium">POS Active Branches</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold text-purple-400">20M+</div>
+          <div class="text-xs text-slate-400 font-medium">Active Users Supported</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
