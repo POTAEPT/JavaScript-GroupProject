@@ -28,10 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Video Modal Popup
+  // 2. Video Modal Popup & YouTube Fallback Fix
   const videoModal = document.getElementById('video-modal');
   const modalTitle = document.getElementById('modal-video-title');
   const modalIframeContainer = document.getElementById('modal-video-container');
+  const modalDirectLink = document.getElementById('modal-direct-link');
   const closeModalBtn = document.getElementById('close-modal-btn');
   const openModalBtns = document.querySelectorAll('.open-video-modal');
 
@@ -40,10 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const title = btn.getAttribute('data-title');
       const embedUrl = btn.getAttribute('data-embed');
+      const directUrl = btn.getAttribute('data-direct');
 
       if (modalTitle) modalTitle.textContent = title;
+      if (modalDirectLink && directUrl) modalDirectLink.setAttribute('href', directUrl);
+
       if (modalIframeContainer && embedUrl) {
-        modalIframeContainer.innerHTML = `<iframe class="w-full h-64 sm:h-96 rounded-xl" src="${embedUrl}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        modalIframeContainer.innerHTML = `<iframe class="w-full h-64 sm:h-96 rounded-xl shadow-inner" src="${embedUrl}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
       }
       if (videoModal) videoModal.classList.remove('hidden');
     });
