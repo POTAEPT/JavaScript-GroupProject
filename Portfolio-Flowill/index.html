@@ -70,7 +70,7 @@
               <span class="text-brand-500">Project Manager / System Analyst</span> & Front-End Developer
             </h1>
             <p class="text-slate-600 text-base leading-relaxed">
-              นักศึกษาชั้นปีที่ 1 สาขาบูรณาการอุตสาหกรรมดิจิทัล (DII) วิทยาลัยศิลปะ สื่อ และเทคโนโลยี มหาวิทยาลัยเชียงใหม่ มีความเชี่ยวชาญด้านการวางสถาปัตยกรรมซอฟต์แวร์ การบริหารจัดการโปรเจกต์ (PM/SA)
+              นักศึกษาชั้นปีที่ 1 สาขาบูรณาการอุตสาหกรรมดิจิทัล (DII) วิทยาลัยศิลปะ สื่อ และเทคโนโลยี มหาวิทยาลัยเชียงใหม่ มีความเชี่ยวชาญด้านการวางสถาปัตยกรรมซอฟต์แวร์ การบริหารจัดการโปรเจกต์ (PM/SA) การพัฒนา Full-Stack Web Application และการสร้างสรรค์มัลติมีเดีย/ตัดต่อวิดีโอ
             </p>
           </div>
 
@@ -110,6 +110,108 @@
               <div class="text-2xl font-extrabold text-slate-700">3.55</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS GALLERY WITH CLIENT-SIDE FILTER (JS) -->
+    <section id="projects" class="py-20 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+          <h2 class="text-xs font-extrabold text-brand-500 uppercase tracking-widest">WORK / PROJECTS</h2>
+          <h3 class="text-3xl font-extrabold text-slate-900">ผลงานและโปรเจกต์เด่น</h3>
+          <p class="text-slate-600 text-sm">เลือกกรองตามหมวดหมู่ผลงานเพื่อรับชมรายละเอียด</p>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap justify-center gap-3 pt-4">
+            <button data-filter="all" class="filter-btn px-5 py-2 rounded-xl bg-brand-500 text-white font-semibold text-xs transition-all shadow-sm">ทั้งหมด (All)</button>
+            <button data-filter="webapp" class="filter-btn px-5 py-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-xs transition-all">Web Application</button>
+            <button data-filter="backend" class="filter-btn px-5 py-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-xs transition-all">Backend & OOP</button>
+            <button data-filter="media" class="filter-btn px-5 py-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-xs transition-all">Video & Media Admin</button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div data-category="webapp" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-full">Web Application</span>
+              <h4 class="text-xl font-bold text-slate-900">Full-Stack E-Commerce Platform</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                พัฒนาเว็บแอปพลิเคชัน E-Commerce แบบ Full-Stack ด้วย Express.js และ SQLite เน้นออกแบบ Layered Architecture มีระบบ Auth ด้วย JWT และรองรับ Microservices Checkout
+              </p>
+            </div>
+            <a href="https://github.com/flogame55/e-commerce" target="_blank" class="text-brand-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              ดูโค้ดใน GitHub &rarr;
+            </a>
+          </div>
+
+          <div data-category="backend" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-sky-50 text-sky-600 text-xs font-bold rounded-full">Backend System</span>
+              <h4 class="text-xl font-bold text-slate-900">M-Spec by WPF</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                เว็บระบบจองคิวปรับจูนรถ (Dyno Test) + ขายอะไหล่หายาก รับผิดชอบพัฒนา Backend ระบบจองคิว ระบบ Login & Register และการ Query ข้อมูลจาก Database
+              </p>
+            </div>
+            <a href="https://github.com/WindsurfHUB/M-Spec-By-WPF.git" target="_blank" class="text-brand-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              ดูโค้ดใน GitHub &rarr;
+            </a>
+          </div>
+
+          <div data-category="webapp" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-bold rounded-full">Finance Tool</span>
+              <h4 class="text-xl font-bold text-slate-900">Moneta Personal Finance Dashboard</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                เว็บแอปพลิเคชันสำหรับจัดการการเงินส่วนบุคคล บันทึกรายรับรายจ่าย และมีระบบช่วยอ่านสลิปธนาคารเบื้องต้น
+              </p>
+            </div>
+            <a href="https://github.com/flogame55/easy-personal-finance.git" target="_blank" class="text-brand-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              ดูโค้ดใน GitHub &rarr;
+            </a>
+          </div>
+
+          <div data-category="webapp" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-purple-50 text-purple-600 text-xs font-bold rounded-full">Glassmorphism UI</span>
+              <h4 class="text-xl font-bold text-slate-900">Weather App API Integration</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                เว็บเช็คสภาพอากาศแบบ Glassmorphism ดึงข้อมูล Real-time จาก OpenWeatherMap API ฝึกการใช้งาน JavaScript Async/Fetch API
+              </p>
+            </div>
+            <a href="https://github.com/flogame55/weather-app-js.git" target="_blank" class="text-brand-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              ดูโค้ดใน GitHub &rarr;
+            </a>
+          </div>
+
+          <div data-category="backend" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-slate-200 text-slate-700 text-xs font-bold rounded-full">Java OOP</span>
+              <h4 class="text-xl font-bold text-slate-900">OOP Learning & Implementation</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                รวบรวมองค์ความรู้จากการเขียนโปรแกรมเชิงวัตถุ (Object-Oriented Programming) ภาษา Java และการทำ Lab เสริมสร้างทักษะการออกแบบซอฟต์แวร์
+              </p>
+            </div>
+            <a href="https://github.com/flogame55/Java-OOP.git" target="_blank" class="text-brand-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              ดูโค้ดใน GitHub &rarr;
+            </a>
+          </div>
+
+          <div data-category="media" class="project-card bg-[#FAFAFC] rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="px-3 py-1 bg-red-50 text-red-600 text-xs font-bold rounded-full">YouTube Admin</span>
+              <h4 class="text-xl font-bold text-slate-900">DII CAMT CMU Channel</h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                เป็นแอดมินบริหารจัดการช่อง YouTube DII CAMT CMU อัปเดตและผลิตคอนเทนต์สื่อสารของสาขาและวิทยาลัย
+              </p>
+            </div>
+            <a href="https://www.youtube.com/@DIICAMTCMU" target="_blank" class="text-red-500 font-semibold text-xs inline-flex items-center gap-1 hover:underline">
+              เข้าชมช่อง YouTube &rarr;
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
