@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — Crafting Core Systems for Big Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="Home.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30">C</div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
+          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="Home.html" class="text-brand-500 font-semibold">หน้าหลัก (Home)</a>
+        <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
+        <a href="#services" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
+        <a href="#team" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20">ติดต่อปรึกษาโซลูชัน</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-grow">
+    <section class="py-16 lg:py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+              Enterprise B2B Software House
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              Crafting <span class="text-brand-500">Core Systems</span> <br/> for Big Business
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+              เราคือผู้นำด้านการวางสถาปัตยกรรมและพัฒนาระบบซอฟต์แวร์ระดับ Enterprise รองรับทราฟฟิกมหาศาล (High-Concurrency)
+            </p>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-3xl bg-darknavy-900 p-6 sm:p-8 shadow-2xl border border-slate-800 text-white">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                <span class="text-xs font-mono text-slate-400">REAL-TIME INFRASTRUCTURE MONITOR</span>
+              </div>
+              <p class="text-xs text-slate-400">System initialization in progress...</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
