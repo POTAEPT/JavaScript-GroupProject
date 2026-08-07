@@ -236,51 +236,75 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 space-y-4 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-red-50 text-red-600 text-[10px] font-bold rounded-md">YouTube Shorts</span>
-              <h4 class="font-bold text-slate-900 text-base">DII | ก่อนแข่ง Hackathon เตรียมตัวอย่างไรดี?</h4>
+          <!-- Video Card 1 -->
+          <div class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="relative bg-slate-900 h-48 group overflow-hidden cursor-pointer open-video-modal" 
+                 data-title="DII | ก่อนแข่ง Hackathon เตรียมตัวอย่างไรดี?" 
+                 data-desc="ก่อนแข่ง Hackathon เตรียมตัวอย่างไรดี? ลองนำแนวทางนี้ไปใช้!! (คำแนะนำจากรุ่นพี่)"
+                 data-thumb="https://img.youtube.com/vi/AGo2zkDvNtE/hqdefault.jpg"
+                 data-direct="https://youtube.com/shorts/AGo2zkDvNtE">
+              <img src="https://img.youtube.com/vi/AGo2zkDvNtE/hqdefault.jpg" alt="DII Hackathon Guide" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform">▶</div>
+              </div>
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-md">Shorts</span>
+            </div>
+            <div class="p-5 space-y-3">
+              <h4 class="font-bold text-slate-900 text-base leading-snug">DII | ก่อนแข่ง Hackathon เตรียมตัวอย่างไรดี?</h4>
               <p class="text-xs text-slate-500 leading-relaxed">คำแนะนำการเตรียมตัวแข่ง Hackathon จากรุ่นพี่ DII</p>
-            </div>
-            <div class="flex items-center gap-2 pt-2">
-              <button data-title="DII | ก่อนแข่ง Hackathon เตรียมตัวอย่างไรดี?" data-embed="https://www.youtube.com/embed/AGo2zkDvNtE?rel=0&enablejsapi=1" data-direct="https://youtube.com/shorts/AGo2zkDvNtE" class="open-video-modal flex-1 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition-all">
-                🎬 พรีวิววิดีโอ
-              </button>
-              <a href="https://youtube.com/shorts/AGo2zkDvNtE" target="_blank" class="px-3 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold transition-all flex items-center gap-1">
-                ▶️ YouTube
-              </a>
+              <div class="pt-2 flex items-center gap-2">
+                <a href="https://youtube.com/shorts/AGo2zkDvNtE" target="_blank" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold text-center transition-all flex items-center justify-center gap-1.5 shadow-md shadow-red-600/20">
+                  ▶️ เล่นวิดีโอบน YouTube
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 space-y-4 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-red-50 text-red-600 text-[10px] font-bold rounded-md">YouTube Video</span>
-              <h4 class="font-bold text-slate-900 text-base">DII | สัมภาษณ์น้องๆ Gen 8 DII</h4>
+          <!-- Video Card 2 -->
+          <div class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="relative bg-slate-900 h-48 group overflow-hidden cursor-pointer open-video-modal" 
+                 data-title="DII | สัมภาษณ์น้องๆ Gen 8 DII" 
+                 data-desc="สัมภาษณ์น้องๆ Gen 8 DII จบจากโรงเรียนไหนกันบ้าง?"
+                 data-thumb="https://img.youtube.com/vi/pYhmUP7Nyso/hqdefault.jpg"
+                 data-direct="https://www.youtube.com/watch?v=pYhmUP7Nyso">
+              <img src="https://img.youtube.com/vi/pYhmUP7Nyso/hqdefault.jpg" alt="Interview Gen 8 DII" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform">▶</div>
+              </div>
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-md">YouTube Video</span>
+            </div>
+            <div class="p-5 space-y-3">
+              <h4 class="font-bold text-slate-900 text-base leading-snug">DII | สัมภาษณ์น้องๆ Gen 8 DII</h4>
               <p class="text-xs text-slate-500 leading-relaxed">สัมภาษณ์บรรยากาศความรู้สึกของน้องๆ นักศึกษาใหม่</p>
-            </div>
-            <div class="flex items-center gap-2 pt-2">
-              <button data-title="DII | สัมภาษณ์น้องๆ Gen 8 DII" data-embed="https://www.youtube.com/embed/pYhmUP7Nyso?rel=0&enablejsapi=1" data-direct="https://www.youtube.com/watch?v=pYhmUP7Nyso" class="open-video-modal flex-1 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition-all">
-                🎬 พรีวิววิดีโอ
-              </button>
-              <a href="https://www.youtube.com/watch?v=pYhmUP7Nyso" target="_blank" class="px-3 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold transition-all flex items-center gap-1">
-                ▶️ YouTube
-              </a>
+              <div class="pt-2 flex items-center gap-2">
+                <a href="https://www.youtube.com/watch?v=pYhmUP7Nyso" target="_blank" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold text-center transition-all flex items-center justify-center gap-1.5 shadow-md shadow-red-600/20">
+                  ▶️ เล่นวิดีโอบน YouTube
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white p-6 rounded-3xl border border-slate-200/80 space-y-4 flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="px-2.5 py-0.5 bg-red-50 text-red-600 text-[10px] font-bold rounded-md">YouTube Shorts</span>
-              <h4 class="font-bold text-slate-900 text-base">DII | Data Structure เรียนอะไรบ้าง?</h4>
-              <p class="text-xs text-slate-500 leading-relaxed">รีวิววิชา Data Structure สรุปความรู้แบบเข้าใจง่าย</p>
+          <!-- Video Card 3 -->
+          <div class="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="relative bg-slate-900 h-48 group overflow-hidden cursor-pointer open-video-modal" 
+                 data-title="DII | Data Structure เรียนอะไรบ้าง?" 
+                 data-desc="Ep1-2: Data Structure เรียนอะไรบ้าง ยากไหม? สรุปความรู้แบบเข้าใจง่าย"
+                 data-thumb="https://img.youtube.com/vi/ugjlwjDnE-4/hqdefault.jpg"
+                 data-direct="https://www.youtube.com/shorts/ugjlwjDnE-4">
+              <img src="https://img.youtube.com/vi/ugjlwjDnE-4/hqdefault.jpg" alt="Data Structure Review" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform">▶</div>
+              </div>
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-md">Shorts</span>
             </div>
-            <div class="flex items-center gap-2 pt-2">
-              <button data-title="DII | Data Structure เรียนอะไรบ้าง?" data-embed="https://www.youtube.com/embed/ugjlwjDnE-4?rel=0&enablejsapi=1" data-direct="https://www.youtube.com/shorts/ugjlwjDnE-4" class="open-video-modal flex-1 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition-all">
-                🎬 พรีวิววิดีโอ
-              </button>
-              <a href="https://www.youtube.com/shorts/ugjlwjDnE-4" target="_blank" class="px-3 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold transition-all flex items-center gap-1">
-                ▶️ YouTube
-              </a>
+            <div class="p-5 space-y-3">
+              <h4 class="font-bold text-slate-900 text-base leading-snug">DII | Data Structure เรียนอะไรบ้าง?</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">รีวิววิชา Data Structure สรุปความรู้แบบเข้าใจง่าย</p>
+              <div class="pt-2 flex items-center gap-2">
+                <a href="https://www.youtube.com/shorts/ugjlwjDnE-4" target="_blank" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold text-center transition-all flex items-center justify-center gap-1.5 shadow-md shadow-red-600/20">
+                  ▶️ เล่นวิดีโอบน YouTube
+                </a>
+              </div>
             </div>
           </div>
 
@@ -291,20 +315,27 @@
 
   <!-- VIDEO MODAL POPUP -->
   <div id="video-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl p-6 max-w-3xl w-full space-y-4 shadow-2xl relative">
+    <div class="bg-white rounded-3xl p-6 max-w-xl w-full space-y-5 shadow-2xl relative">
       <div class="flex items-center justify-between border-b border-slate-100 pb-3">
         <h4 id="modal-video-title" class="font-bold text-slate-900 text-lg">วิดีโอผลงาน</h4>
         <button id="close-modal-btn" class="text-slate-400 hover:text-slate-700 text-xl font-bold px-2">✕</button>
       </div>
-      
-      <div id="modal-video-container" class="w-full">
-        <!-- Iframe loaded via JS -->
+
+      <!-- Preview Image Container -->
+      <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video group">
+        <img id="modal-video-thumb" src="" alt="Video Preview" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <a id="modal-play-btn" href="#" target="_blank" class="w-16 h-16 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform">
+            ▶
+          </a>
+        </div>
       </div>
 
-      <div class="pt-2 flex items-center justify-between border-t border-slate-100">
-        <span class="text-xs text-slate-500">หากเพลเยอร์ติดขัดเรื่องนโยบายความปลอดภัย ให้คลิกเปิดดูบน YouTube โดยตรง</span>
-        <a id="modal-direct-link" href="#" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-xl flex items-center gap-1">
-          ▶️ เปิดดูบน YouTube
+      <p id="modal-video-desc" class="text-xs text-slate-600 leading-relaxed"></p>
+
+      <div class="pt-2 flex items-center justify-end border-t border-slate-100">
+        <a id="modal-direct-link" href="#" target="_blank" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-red-600/25 transition-all">
+          ▶️ เล่นวิดีโอนี้บน YouTube
         </a>
       </div>
     </div>
