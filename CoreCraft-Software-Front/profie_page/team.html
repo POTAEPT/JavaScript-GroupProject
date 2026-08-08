@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Team | CoreCraft Software</title>
   
-  <!-- โหลดไฟล์ CSS ตัวเดิม -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- โหลดไฟล์ JS ตัวเดิม -->
-  <script src="script.js"></script>
-  
-  <!-- โหลด Tailwind CSS -->
+  <link rel="stylesheet" href="team_style.css">
+ 
   <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <script src="team_script.js"></script>
 </head>
 <body class="bg-white font-sans text-darknavy-800 antialiased">
 
-  <!-- ================= HEADER ================= -->
  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <!-- Logo -->
@@ -28,7 +25,6 @@
       </div>
     </a>
 
-    <!-- Nav Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
       <a href="Home.html" class="hover:text-slate-900 transition-colors">หน้าหลัก (Home)</a>
       <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
@@ -37,22 +33,21 @@
       <a href="team.html" class="text-brand-500 font-semibold">ทีมงานของเรา (Team)</a>
     </nav>
 
-    <!-- CTA Button -->
     <div class="hidden md:flex items-center gap-4">
-      <a href="Home.html#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20 transition-all hover:-translate-y-0.5">
+      <a href="Home.html#contact" class="px-6 py-2.5 rounded-btn bg-brand-500 hover:bg-brand-600 text-white font-semibold text-base shadow-brand-glow transition-all hover:-translate-y-0.5">
         ติดต่อปรึกษาโซลูชัน
       </a>
     </div>
   </div>
 </header>
 
-  <!-- ================= MAIN CONTENT (MEET OUR EXPERTS) ================= -->
+ 
   <main class="py-24 px-6">
   <!-- Section Header -->
   <div class="max-w-4xl mx-auto text-center mb-20">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-darknavy-900 mb-6 tracking-tight">Meet Our Experts</h1>
-    <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-      Our dedicated team of seasoned professionals brings decades of combined experience to every project.
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-darknavy-900 mb-6 tracking-tight">Meet Our Experts</h1>
+    <p class="text-lg font-normal text-gray-500 max-w-2xl mx-auto leading-relaxed">
+     ทีมงานผู้เชี่ยวชาญมากประสบการณ์ของเรา พร้อมนำความรู้และความเชี่ยวชาญที่สั่งสมมาหลายทศวรรษ มาร่วมสร้างสรรค์โซลูชันที่มั่นคงและตอบโจทย์ทุกความท้าทายของธุรกิจ
     </p>
   </div>
 
@@ -66,10 +61,10 @@
           class="w-full h-full object-cover rounded-full shadow-inner border border-gray-100"
         />
       </div>
-      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">Sarah Jenkins</h3>
-      <span class="text-brand-500 font-semibold text-sm mb-4">Lead Full-Stack Developer</span>
+      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">นาย จิรายุ พรมยวน	(โฟว์วิล)</h3>
+      <span class="text-brand-500 font-semibold text-sm mb-4">Project Manager (PM) / System Analyst (SA)</span>
       <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-        Sarah architects scalable, high-performance systems with over 10 years of enterprise experience.
+        บริหารและกำกับระยะเวลาโครงการ รวบรวมและวิเคราะห์ความต้องการของผู้ใช้งาน พร้อมวางสถาปัตยกรรมระบบ POS และ ERP ให้สอดคล้องกับเป้าหมายทางธุรกิจ
       </p>
       
       <div class="flex items-center gap-4 text-gray-400 mt-auto">
@@ -82,7 +77,7 @@
       </div>
     </div>
 
-    <!-- Card 2: David Chen -->
+    <!-- Card 2 -->
     <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-card flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
       <div class="w-28 h-28 mb-6 relative">
         <img 
@@ -91,10 +86,10 @@
           class="w-full h-full object-cover rounded-full shadow-inner border border-gray-100"
         />
       </div>
-      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">David Chen</h3>
-      <span class="text-brand-500 font-semibold text-sm mb-4">Security Engineer</span>
+      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">นาย ณัฐวุฒิ แร่มี	(โปเต้)</h3>
+      <span class="text-brand-500 font-semibold text-sm mb-4">Lead Full-Stack Developer / Core Architect</span>
       <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-        David ensures our infrastructure is impregnable, specializing in zero-trust architecture and threat mitigation.
+      พัฒนาระบบซอฟต์แวร์หลัก ออกแบบโครงสร้าง API และ Microservices พร้อมดูแลประสิทธิภาพและความปลอดภัยของระบบให้มีความเสถียรและรองรับการใช้งานในระดับ Enterprise
       </p>
       
       <div class="flex items-center gap-4 text-gray-400 mt-auto">
@@ -107,7 +102,7 @@
       </div>
     </div>
 
-    <!-- Card 3: Elena Rodriguez -->
+    <!-- Card 3 -->
     <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-card flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
       <div class="w-28 h-28 mb-6 relative">
         <img 
@@ -116,10 +111,10 @@
           class="w-full h-full object-cover rounded-full shadow-inner border border-gray-100"
         />
       </div>
-      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">Elena Rodriguez</h3>
-      <span class="text-brand-500 font-semibold text-sm mb-4">Product Manager</span>
+      <h3 class="text-xl font-bold text-darknavy-900 mb-1.5">นางสาว บุญยาพร แก้วพันธ์	(มินตรา)</h3>
+      <span class="text-brand-500 font-semibold text-sm mb-4">UI/UX Designer & Lead Frontend Developer</span>
       <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-        Elena translates complex business requirements into intuitive, user-centric software solutions.
+       ออกแบบ Design System ด้วย Tailwind CSS พัฒนาส่วนติดต่อผู้ใช้งานให้สอดคล้องกับ Layout และออกแบบ Responsive Interface เพื่อมอบประสบการณ์การใช้งานที่ราบรื่นในทุกอุปกรณ์
       </p>
       
       <div class="flex items-center gap-4 text-gray-400 mt-auto">
@@ -135,7 +130,7 @@
   </div>
 </main>
 
-  <!-- ================= FOOTER ================= -->
+ 
   <footer id="contact" class="bg-darknavy-900 text-slate-400 py-16 border-t border-slate-800">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
     <div class="space-y-4">
