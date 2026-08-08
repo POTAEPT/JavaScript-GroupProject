@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Brand Color Tokens */
+
   --color-brand-50: #FFF7ED;
   --color-brand-100: #FFEDD5;
   --color-brand-500: #FF5500;
   --color-brand-600: #EA4A00;
   --color-brand-700: #C23800;
 
-  /* Dark Navy Tokens */
   --color-navy-900: #0B132B;
   --color-navy-800: #0F172A;
   --color-navy-700: #1E293B;
-
-  /* Surface & Text Tokens */
+  
   --color-bg-canvas: #FAFAFC;
   --color-bg-card: #FFFFFF;
   --color-border-light: #F1F5F9;

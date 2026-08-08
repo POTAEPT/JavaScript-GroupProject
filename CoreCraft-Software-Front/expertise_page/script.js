@@ -6,7 +6,7 @@ tailwind.config = {
         // ใช้ตัวแปรฟอนต์จาก CSS
         sans: ['var(--font-prompt)', 'var(--font-inter)', 'sans-serif'],
       },
-      colors: {
+    colors: {
         brand: {
           50: 'var(--color-brand-50)',
           100: 'var(--color-brand-100)',
