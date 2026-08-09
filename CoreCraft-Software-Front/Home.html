@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — Crafting Core Systems for Big Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          },
+          boxShadow: {
+            'brand-glow': '0 10px 25px -5px rgba(255, 85, 0, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="Home.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">C</div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
+          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="Home.html" class="text-brand-500 font-semibold">หน้าหลัก (Home)</a>
+        <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
+        <a href="#services" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
+        <a href="#cases" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
+        <a href="#team" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">ติดต่อปรึกษาโซลูชัน</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-3">
+      <a href="Home.html" class="block font-semibold text-brand-500">หน้าหลัก (Home)</a>
+      <a href="Whyus.html" class="block text-slate-600 hover:text-slate-900">ทำไมต้องเลือกเรา (Why Us)</a>
+      <a href="#services" class="block text-slate-600 hover:text-slate-900">บริการของเรา (Services)</a>
+      <a href="#cases" class="block text-slate-600 hover:text-slate-900">ผลงานเด่น (Case Studies)</a>
+      <a href="#team" class="block text-slate-600 hover:text-slate-900">ทีมงานของเรา (Team)</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-grow">
+    <section class="py-16 lg:py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Text Content -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+              Enterprise B2B Software House
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              Crafting <span class="text-brand-500">Core Systems</span> <br/> for Big Business
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+              เราคือผู้นำด้านการวางสถาปัตยกรรมและพัฒนาระบบซอฟต์แวร์ระดับ Enterprise รองรับทราฟฟิกมหาศาล (High-Concurrency) และระบบความปลอดภัยระดับสถาบันการเงิน (Bank-Grade Security)
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="Whyus.html" class="px-7 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-base shadow-lg shadow-brand-500/25 transition-all">ดูสถาปัตยกรรมระบบ (Why Us)</a>
+              <a href="#services" class="px-7 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-base shadow-sm hover:shadow transition-all">บริการของเรา</a>
+            </div>
+          </div>
+
+          <!-- Right Interactive POS TPS Simulator (Client-Side JS) -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-3xl bg-darknavy-900 p-6 sm:p-8 shadow-2xl border border-slate-800 text-white overflow-hidden">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                  <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                </div>
+                <span class="text-xs font-mono text-slate-400">REAL-TIME INFRASTRUCTURE MONITOR</span>
+              </div>
+
+              <!-- Metrics Display -->
+              <div class="space-y-6">
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/50">
+                    <div class="text-[11px] text-slate-400 uppercase font-medium">Throughput</div>
+                    <div id="sim-tps" class="text-xl font-extrabold text-brand-500 mt-1">10,450 TPS</div>
+                  </div>
+                  <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/50">
+                    <div class="text-[11px] text-slate-400 uppercase font-medium">Active POS Nodes</div>
+                    <div id="sim-nodes" class="text-xl font-bold text-sky-400 mt-1">14,200</div>
+                  </div>
+                  <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/50">
+                    <div class="text-[11px] text-slate-400 uppercase font-medium">Avg Latency</div>
+                    <div id="sim-latency" class="text-xl font-bold text-emerald-400 mt-1">42 ms</div>
+                  </div>
+                </div>
+
+                <!-- Simulation Trigger Button -->
+                <div class="bg-slate-800/50 rounded-2xl p-4 border border-slate-700/50 flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-slate-300">ทดลองจำลองทราฟฟิกสั่งซื้อ POS (Traffic Burst Test)</span>
+                    <button id="sim-boost-btn" class="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white font-medium text-xs rounded-lg shadow-md transition-all">
+                      + จำลองทราฟฟิกชั่วโมงเร่งด่วน
+                    </button>
+                  </div>
+                  <div id="sim-status-log" class="h-20 overflow-y-auto bg-slate-950 p-2.5 rounded-lg space-y-1 text-xs">
+                    <div class="text-xs text-slate-400 font-mono">[09:00:00] System Ready: Kafka brokers online (Cluster 5 nodes).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 class="text-xs font-extrabold text-brand-500 uppercase tracking-widest">CORE SERVICES</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">เชี่ยวชาญ 4 บริการหลักระดับองค์กรใหญ่</h3>
+          <p class="text-slate-600 text-base">เรามุ่งมั่นสร้างระบบหัวใจหลักที่ขับเคลื่อนธุรกิจของคุณอย่างไร้รอยต่อ</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">🛒</div>
+            <h4 class="text-xl font-bold text-slate-900">Enterprise POS Systems</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">ระบบจุดขายหน้าร้านระดับหมื่นสาขา สถาปัตยกรรม Offline-First ทำงานได้ 100% แม้อินเทอร์เน็ตหลุด ซิงก์เรียลไทม์เข้า Cloud</p>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">📦</div>
+            <h4 class="text-xl font-bold text-slate-900">Custom ERP & Supply Chain</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">เชื่อมโยงระบบบัญชี คลังสินค้าอัตโนมัติ (WMS) และการขนส่ง แม่นยำ 99.98% ด้วย Redis In-Memory Cache</p>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">💳</div>
+            <h4 class="text-xl font-bold text-slate-900">Financial Payment Gateway</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">ระบบสวิตชิ่งชำระเงินความเร็วสูง Latency ย่อยกว่า 50ms มาตรฐานความปลอดภัยระดับสถาบันการเงิน ISO27001 & PCI-DSS</p>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">☁️</div>
+            <h4 class="text-xl font-bold text-slate-900">Cloud-Native Microservices</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">วางระบบบน Kubernetes คอนเทนเนอร์ รองรับ Auto-Scaling ในช่วงโปรโมชันหรือชั่วโมงทราฟฟิกพุ่งสูงอย่างยืดหยุ่น</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section id="cases" class="py-20 bg-[#FAFAFC] border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 class="text-xs font-extrabold text-brand-500 uppercase tracking-widest">CASE STUDIES</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">ผลงานเด่นระดับ Enterprise</h3>
+          <p class="text-slate-600 text-base">ระบบที่เราพัฒนาและบริหารให้กับลูกค้าระดับชั้นนำของประเทศ</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-full">Retail Giant</span>
+              <span class="text-xs text-slate-400 font-mono">14,000+ Branches</span>
+            </div>
+            <h4 class="text-2xl font-bold text-slate-900">Next-Gen Enterprise POS System (7-Eleven)</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              พัฒนาระบบ POS หน้าร้านสำหรับสะดวกซื้อ 14,000+ สาขาทั่วประเทศ รองรับทราฟฟิกชำระเงินมากกว่า 10,000 TPS สถาปัตยกรรม Offline-First ป้องกันปัญหาสายเน็ตหลุด
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-sky-50 text-sky-600 text-xs font-bold rounded-full">Banking & Finance</span>
+              <span class="text-xs text-slate-400 font-mono">Uptime SLA 99.999%</span>
+            </div>
+            <h4 class="text-2xl font-bold text-slate-900">High-Speed Payment Switch (Commercial Bank)</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              ระบบสวิตชิ่งรับชำระเงิน PromptPay และ Credit Card Latency ต่ำกว่า 50ms ใช้ Circuit Breaker และ Rate Limiting ป้องกันระบบล่ม ปลอดภัยสูงสุด
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM SHOWCASE SECTION -->
+    <section id="team" class="py-20 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 class="text-xs font-extrabold text-brand-500 uppercase tracking-widest">OUR EXPERTS</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">ทีมงานผู้อยู่เบื้องหลังความสำเร็จ</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Member 1: Flowill -->
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all text-center space-y-4">
+            <img src="img/1748679721296.jpg" alt="นาย จิรายุ พรมยวน (โฟว์วิล)" class="w-24 h-24 rounded-2xl object-cover mx-auto shadow-lg shadow-brand-500/30 border-2 border-brand-500" />
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">นาย จิรายุ พรมยวน</h4>
+              <p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mt-1">Project Manager (PM) / System Analyst (SA)</p>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              ควบคุมระยะเวลาโปรเจกต์ วางสถาปัตยกรรมระบบ POS & ERP และสรุป Requirements ระดับองค์กร
+            </p>
+          </div>
+
+          <!-- Member 2: Pote -->
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all text-center space-y-4">
+            <div class="w-24 h-24 bg-darknavy-900 text-white rounded-2xl flex items-center justify-center text-2xl font-extrabold mx-auto">
+              PT
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">นาย ณัฐวุฒิ แร่มี</h4>
+              <p class="text-xs font-semibold text-sky-600 uppercase tracking-wide mt-1">Lead Full-Stack Developer / Architect</p>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              พัฒนาระบบหลัก ออกแบบ API & Microservices ดูแล Performance & Security
+            </p>
+          </div>
+
+          <!-- Member 3: Mintra -->
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all text-center space-y-4">
+            <div class="w-24 h-24 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-extrabold mx-auto">
+              MT
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">นางสาว บุญยาพร แก้วพันธ์</h4>
+              <p class="text-xs font-semibold text-purple-600 uppercase tracking-wide mt-1">UI/UX Designer & Lead Frontend</p>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              ออกแบบ Design System (Tailwind CSS) พัฒนาหน้าเว็บตาม Layout และทำ Responsive Design
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-darknavy-900 text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-base">C</div>
+          <span class="text-lg font-bold text-white tracking-tight">CoreCraft</span>
+        </div>
+        <p class="text-xs leading-relaxed">Crafting Core Systems for Big Business. Enterprise B2B Software House ชั้นนำของไทย</p>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริการ</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#services" class="hover:text-white">Enterprise POS</a></li>
+          <li><a href="#services" class="hover:text-white">ERP & Supply Chain</a></li>
+          <li><a href="#services" class="hover:text-white">Payment Switch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริษัท</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="Home.html" class="hover:text-white">หน้าหลัก</a></li>
+          <li><a href="Whyus.html" class="hover:text-white">ทำไมต้องเลือกเรา</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">ติดต่อเรา</h4>
+        <p class="text-xs">CoreCraft Software Co., Ltd.</p>
+        <p class="text-xs mt-1">Email: contact@corecraft.co.th</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800/80 flex justify-between text-xs text-slate-500">
+      <p>© 2026 CoreCraft Software Co., Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
