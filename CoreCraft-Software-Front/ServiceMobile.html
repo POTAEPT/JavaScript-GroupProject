@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — พัฒนาแอปพลิเคชันมือถือ (Mobile Development)</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          },
+          boxShadow: {
+            'brand-glow': '0 10px 25px -5px rgba(255, 85, 0, 0.25)',
+            'card-soft': '0 20px 40px -15px rgba(15, 23, 42, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+   <!-- HEADER NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="flex-grow">
+
+    <!-- BREADCRUMB & HERO SECTION -->
+    <section class="pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        
+        <nav class="flex justify-center items-center gap-2 text-xs font-medium text-slate-500 mb-8 animate-on-scroll">
+          <a href="Home.html" class="hover:text-slate-800 transition-colors">หน้าหลัก</a>
+          <span>&gt;</span>
+          <a href="Services.html" class="hover:text-slate-800 transition-colors">บริการของเรา</a>
+          <span>&gt;</span>
+          <span class="text-slate-900 font-semibold">แอปพลิเคชันมือถือ</span>
+        </nav>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] animate-on-scroll">
+            พัฒนาแอปพลิเคชันมือถือ <br class="hidden sm:block"/>
+            <span class="text-brand-500">ระดับ Enterprise</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+            สร้างประสบการณ์ดิจิทัลที่ลื่นไหลบนทุกหน้าจอ ด้วยแอปพลิเคชันแบบ Native และ Cross-platform ที่มีประสิทธิภาพสูง พร้อมระบบเชื่อมต่อ API ที่ปลอดภัย
+          </p>
+          <div class="pt-2 animate-on-scroll">
+            <a href="#contact" class="inline-block px-8 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+              ปรึกษาผู้เชี่ยวชาญ
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile App Preview Image -->
+        <div class="mt-12 sm:mt-16 animate-on-scroll">
+          <div class="relative max-w-4xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 bg-darknavy-900 group">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Mobile Application Interface" 
+                 loading="lazy"
+                 class="w-full h-[400px] sm:h-[500px] object-cover opacity-90 group-hover:scale-[1.01] transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-darknavy-900/60 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 1: NATIVE PERFORMANCE (Left-Right Layout) -->
+    <section class="py-16 lg:py-24 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="space-y-6 order-2 lg:order-1 animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              ประสบการณ์ใช้งานที่ลื่นไหลระดับ Native
+            </h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              เราเลือกใช้เทคโนโลยีที่เหมาะสมที่สุดสำหรับโปรเจกต์ของคุณ เพื่อให้แอปพลิเคชันดึงประสิทธิภาพการประมวลผลของอุปกรณ์ออกมาได้สูงสุด
+            </p>
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">UI/UX แบบ 60fps+ มอบการสัมผัสที่รวดเร็วไม่หน่วงเครื่อง</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">รีดประสิทธิภาพแบตเตอรี่ (Battery Optimization) อย่างเหมาะสม</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-on-scroll">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-slate-900 group">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Mobile App Performance" 
+                   loading="lazy"
+                   class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: ENTERPRISE CAPABILITIES (3-Column Grid Layout) -->
+    <section class="py-16 lg:py-24 bg-[#FAFAFC] border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            ฟีเจอร์หลักสำหรับแอปองค์กร
+          </h2>
+          <p class="mt-4 text-slate-600 text-base">ระบบสนับสนุนการทำงานเบื้องหลังที่จะทำให้แอปพลิเคชันของคุณแข็งแกร่ง</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1: Offline First -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-card-soft transition-all duration-300 animate-on-scroll">
+            <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-500 flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Offline-First Sync</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              สถาปัตยกรรมที่ช่วยให้แอปทำงานได้ปกติแม้ไม่มีอินเทอร์เน็ต ด้วยการเก็บข้อมูลไว้ใน Local Database และซิงก์อัตโนมัติเมื่อกลับมาออนไลน์
+            </p>
+          </div>
+
+          <!-- Card 2: Biometric Security -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-card-soft transition-all duration-300 animate-on-scroll" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Biometric Security</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              ยืนยันตัวตนด้วยการสแกนลายนิ้วมือหรือใบหน้า (FaceID/TouchID) ร่วมกับการเข้ารหัส Key Store ระดับฮาร์ดแวร์เพื่อความปลอดภัยสูงสุด
+            </p>
+          </div>
+
+          <!-- Card 3: Real-time Communication -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-card-soft transition-all duration-300 animate-on-scroll" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-500 flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Real-time Push Engine</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              ส่งแจ้งเตือนและอัปเดตข้อมูลแบบเรียลไทม์ผ่าน WebSocket และ Push Notifications ช่วยรักษาฐานผู้ใช้งาน (User Retention)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION (Mobile Specialized) -->
+    <section class="py-20 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            เทคโนโลยีฝั่ง Mobile ที่เราเชี่ยวชาญ
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col items-center gap-4 group cursor-pointer animate-on-scroll">
+            <span class="font-bold text-slate-900 text-lg">React Native</span>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col items-center gap-4 group cursor-pointer animate-on-scroll">
+            <span class="font-bold text-slate-900 text-lg">Flutter</span>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col items-center gap-4 group cursor-pointer animate-on-scroll">
+            <span class="font-bold text-slate-900 text-lg">Swift (iOS)</span>
+          </div>
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col items-center gap-4 group cursor-pointer animate-on-scroll">
+            <span class="font-bold text-slate-900 text-lg">Kotlin (Android)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 };
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+    });
+  </script>
+</body>
+</html>

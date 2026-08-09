@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — ระบบ POS และ ERP สำหรับองค์กร</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          },
+          boxShadow: { 'brand-glow': '0 10px 25px -5px rgba(255, 85, 0, 0.25)', 'card-soft': '0 20px 40px -15px rgba(15, 23, 42, 0.05)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+    .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <!-- HEADER NAVBAR -->
+  <div id="navbar-placeholder"></div>
+  
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <nav class="flex justify-center items-center gap-2 text-xs font-medium text-slate-500 mb-8 animate-on-scroll">
+          <a href="Home.html" class="hover:text-slate-800 transition-colors">หน้าหลัก</a>
+          <span>&gt;</span>
+          <a href="Services.html" class="hover:text-slate-800 transition-colors">บริการของเรา</a>
+          <span>&gt;</span>
+          <span class="text-slate-900 font-semibold">Enterprise POS & ERP</span>
+        </nav>
+        <div class="max-w-4xl mx-auto space-y-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] animate-on-scroll">
+            ระบบ POS และ ERP <br class="hidden sm:block"/>
+            <span class="text-brand-500">สำหรับธุรกิจขนาดใหญ่</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+            ขับเคลื่อนการดำเนินงานหน้าร้านและหลังบ้านของคุณด้วยระบบศูนย์กลางที่มีเสถียรภาพสูงสุด รองรับเครือข่ายสาขาจำนวนมหาศาลได้อย่างแม่นยำ
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE ERP FEATURES (2x2 Grid) -->
+    <section class="py-16 lg:py-24 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm animate-on-scroll">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-500 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">ควบคุมเงินสดและจุดขาย (POS)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              ติดตามและกระทบยอดเงินสดหน้าเคาน์เตอร์ได้อย่างรัดกุม ปิดช่องโหว่ด้านการทุจริตหรือเงินสูญหาย พร้อมรองรับการชำระเงินทุกรูปแบบ (Omnichannel Payments)
+            </p>
+          </div>
+
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm animate-on-scroll" style="transition-delay: 100ms;">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">ตัดสต๊อกและคำนวณวัตถุดิบอัตโนมัติ</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              ระบบ Recipe Deduction หักล้างวัตถุดิบออกจากคลังทันทีที่เกิดการขาย ช่วยให้ทีมงานทราบสถานะสินค้าคงคลังแบบ Real-time และลดความผิดพลาดจากคน (Human Error)
+            </p>
+          </div>
+
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm animate-on-scroll" style="transition-delay: 200ms;">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">เชื่อมโยงข้อมูลข้ามสาขา (Cloud Sync)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              รวมศูนย์ข้อมูลการขาย โปรโมชัน และสต๊อกจากทุกสาขาเข้าสู่ระบบส่วนกลาง ผู้บริหารสามารถเข้าถึงรายงานสรุปผลเชิงลึกได้ทุกที่ทุกเวลา
+            </p>
+          </div>
+
+          <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm animate-on-scroll" style="transition-delay: 300ms;">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">ความปลอดภัยและการกำหนดสิทธิ์</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              กำหนดสิทธิ์การเข้าถึงเมนูต่างๆ (Role-Based Access Control) แยกการจัดการระหว่างแคชเชียร์ ผู้จัดการสาขา และผู้ดูแลระบบส่วนกลาง
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+      document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+    });
+  </script>
+</body>
+</html>

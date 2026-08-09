@@ -28,47 +28,8 @@
 </head>
 <body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="Home.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">C</div>
-        <div class="flex flex-col">
-          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
-          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
-        </div>
-      </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="Home.html" class="text-brand-500 font-semibold">หน้าหลัก (Home)</a>
-        <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
-        <a href="#services" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
-        <a href="#cases" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
-        <a href="#team" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
-      </nav>
-
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">ติดต่อปรึกษาโซลูชัน</a>
-      </div>
-
-      <!-- Mobile Hamburger -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-3">
-      <a href="Home.html" class="block font-semibold text-brand-500">หน้าหลัก (Home)</a>
-      <a href="Whyus.html" class="block text-slate-600 hover:text-slate-900">ทำไมต้องเลือกเรา (Why Us)</a>
-      <a href="#services" class="block text-slate-600 hover:text-slate-900">บริการของเรา (Services)</a>
-      <a href="#cases" class="block text-slate-600 hover:text-slate-900">ผลงานเด่น (Case Studies)</a>
-      <a href="#team" class="block text-slate-600 hover:text-slate-900">ทีมงานของเรา (Team)</a>
-    </div>
-  </header>
+  <div id="navbar-placeholder"></div>
 
   <!-- HERO SECTION -->
   <main class="flex-grow">
@@ -143,7 +104,7 @@
       </div>
     </section>
 
-    <!-- CORE SERVICES SECTION -->
+<!-- CORE SERVICES SECTION -->
     <section id="services" class="py-20 bg-white border-t border-slate-100">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -153,26 +114,35 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">🛒</div>
-            <h4 class="text-xl font-bold text-slate-900">Enterprise POS Systems</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">ระบบจุดขายหน้าร้านระดับหมื่นสาขา สถาปัตยกรรม Offline-First ทำงานได้ 100% แม้อินเทอร์เน็ตหลุด ซิงก์เรียลไทม์เข้า Cloud</p>
-          </div>
-          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">📦</div>
-            <h4 class="text-xl font-bold text-slate-900">Custom ERP & Supply Chain</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">เชื่อมโยงระบบบัญชี คลังสินค้าอัตโนมัติ (WMS) และการขนส่ง แม่นยำ 99.98% ด้วย Redis In-Memory Cache</p>
-          </div>
-          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">💳</div>
-            <h4 class="text-xl font-bold text-slate-900">Financial Payment Gateway</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">ระบบสวิตชิ่งชำระเงินความเร็วสูง Latency ย่อยกว่า 50ms มาตรฐานความปลอดภัยระดับสถาบันการเงิน ISO27001 & PCI-DSS</p>
-          </div>
-          <div class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold">☁️</div>
-            <h4 class="text-xl font-bold text-slate-900">Cloud-Native Microservices</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">วางระบบบน Kubernetes คอนเทนเนอร์ รองรับ Auto-Scaling ในช่วงโปรโมชันหรือชั่วโมงทราฟฟิกพุ่งสูงอย่างยืดหยุ่น</p>
-          </div>
+          
+          <!-- Service 1: Custom Software -->
+          <a href="WebCustom.html" class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-100 transition-all space-y-4 group block cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">💻</div>
+            <h4 class="text-xl font-bold text-slate-900 group-hover:text-brand-500 transition-colors">Custom Web & Apps</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">โซลูชันซอฟต์แวร์สั่งทำเฉพาะที่รองรับ Business Logic ซับซ้อน มั่นใจได้ถึงความสามารถในการขยายระบบและตอบสนองไว</p>
+          </a>
+
+          <!-- Service 2: Mobile Development -->
+          <a href="ServiceMobile.html" class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-100 transition-all space-y-4 group block cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">📱</div>
+            <h4 class="text-xl font-bold text-slate-900 group-hover:text-brand-500 transition-colors">Mobile Development</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">พัฒนาแอป Native และ Cross-platform ที่ลื่นไหล ประสิทธิภาพสูง และรองรับการทำงานแบบออฟไลน์ (Offline-first)</p>
+          </a>
+
+          <!-- Service 3: Enterprise POS & ERP -->
+          <a href="ServiceEnterprise.html" class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-100 transition-all space-y-4 group block cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">🏢</div>
+            <h4 class="text-xl font-bold text-slate-900 group-hover:text-brand-500 transition-colors">Enterprise POS & ERP</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">ระบบศูนย์กลางจัดการเครือข่ายร้านค้า ห่วงโซ่อุปทาน และตัดสต๊อกอัตโนมัติ ด้วยความยืดหยุ่นและเสถียรภาพสูงสุด</p>
+          </a>
+
+          <!-- Service 4: Cloud Infrastructure -->
+          <a href="ServiceCloud.html" class="bg-[#FAFAFC] rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-100 transition-all space-y-4 group block cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">☁️</div>
+            <h4 class="text-xl font-bold text-slate-900 group-hover:text-brand-500 transition-colors">Cloud Infrastructure</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">ย้ายระบบสู่สถาปัตยกรรม Kubernetes และ Cloud-native Microservices เพื่อการขยายระบบอัตโนมัติอย่างไร้ขีดจำกัด</p>
+          </a>
+
         </div>
       </div>
     </section>
@@ -234,9 +204,7 @@
 
           <!-- Member 2: Pote -->
           <div class="bg-[#FAFAFC] rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all text-center space-y-4">
-            <div class="w-24 h-24 bg-darknavy-900 text-white rounded-2xl flex items-center justify-center text-2xl font-extrabold mx-auto">
-              PT
-            </div>
+             <img src="img/potaepic.png" alt="potae" class="w-24 h-24 rounded-2xl object-cover mx-auto shadow-lg shadow-brand-500/30 border-2 border-brand-500" />
             <div>
               <h4 class="text-xl font-bold text-slate-900">นาย ณัฐวุฒิ แร่มี</h4>
               <p class="text-xs font-semibold text-sky-600 uppercase tracking-wide mt-1">Lead Full-Stack Developer / Architect</p>
@@ -264,41 +232,9 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer id="contact" class="bg-darknavy-900 text-slate-400 py-16 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-      <div class="space-y-4">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-base">C</div>
-          <span class="text-lg font-bold text-white tracking-tight">CoreCraft</span>
-        </div>
-        <p class="text-xs leading-relaxed">Crafting Core Systems for Big Business. Enterprise B2B Software House ชั้นนำของไทย</p>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริการ</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#services" class="hover:text-white">Enterprise POS</a></li>
-          <li><a href="#services" class="hover:text-white">ERP & Supply Chain</a></li>
-          <li><a href="#services" class="hover:text-white">Payment Switch</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริษัท</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="Home.html" class="hover:text-white">หน้าหลัก</a></li>
-          <li><a href="Whyus.html" class="hover:text-white">ทำไมต้องเลือกเรา</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">ติดต่อเรา</h4>
-        <p class="text-xs">CoreCraft Software Co., Ltd.</p>
-        <p class="text-xs mt-1">Email: contact@corecraft.co.th</p>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800/80 flex justify-between text-xs text-slate-500">
-      <p>© 2026 CoreCraft Software Co., Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+<div id="footer-placeholder"></div>
+
+  <script src="js/script.js"></script>
 
   <script src="js/home.js"></script>
 </body>

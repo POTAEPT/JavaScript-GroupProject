@@ -26,29 +26,8 @@
 <body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- HEADER NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="Home.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30">C</div>
-        <div class="flex flex-col">
-          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
-          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
-        </div>
-      </a>
+  <div id="navbar-placeholder"></div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="Home.html" class="hover:text-slate-900 transition-colors">หน้าหลัก (Home)</a>
-        <a href="Whyus.html" class="text-brand-500 font-semibold">ทำไมต้องเลือกเรา (Why Us)</a>
-        <a href="Home.html#services" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
-        <a href="Home.html#cases" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
-        <a href="Home.html#team" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
-      </nav>
-
-      <div class="hidden md:flex items-center gap-4">
-        <a href="Home.html#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20">ติดต่อปรึกษาโซลูชัน</a>
-      </div>
-    </div>
-  </header>
 
   <!-- HERO SECTION -->
   <main class="flex-grow">
@@ -206,15 +185,9 @@ const creditCard = { pay: (amt) => `PCI-DSS Credit Card charged \${amt} THB` };<
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-darknavy-900 text-slate-400 py-12 border-t border-slate-800 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 CoreCraft Software Co., Ltd. All rights reserved.</p>
-      <div class="flex items-center gap-6">
-        <a href="Home.html" class="hover:text-white">หน้าหลัก</a>
-        <a href="Whyus.html" class="text-white">ทำไมต้องเลือกเรา</a>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <script src="js/script.js"></script>
 
   <script src="js/whyus.js"></script>
 </body>
