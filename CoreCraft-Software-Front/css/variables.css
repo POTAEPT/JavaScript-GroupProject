@@ -29,3 +29,14 @@
   --radius-btn: 0.75rem;
   --shadow-brand: 0 10px 25px -5px rgba(255, 85, 0, 0.25);
 }
+
+/* ตั้งค่าพื้นฐานเพิ่มเติม */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  /* เรียกใช้ตัวแปรสำหรับสีพื้นหลังแทนการฮาร์ดโค้ด */
+  background-color: var(--color-bg-canvas); 
+}

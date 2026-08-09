@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreCraft Software — รับพัฒนาเว็บไซต์และแอปพลิเคชันแบบคัสตอม</title>
+  
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#ff5500', 600: '#ea4a00', 700: '#c23800' },
+            darknavy: { 900: '#0b132b', 800: '#0f172a', 700: '#1e293b' }
+          },
+          boxShadow: {
+            'brand-glow': '0 10px 25px -5px rgba(255, 85, 0, 0.25)',
+            'card-soft': '0 20px 40px -15px rgba(15, 23, 42, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Animation Helper Styles -->
+  <style>
+    /* CSS สำหรับเตรียม Element ก่อนทำ Fade-in ใน JS */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- HEADER NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="Home.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">C</div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
+          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="Home.html" class="text-brand-500 font-semibold">หน้าหลัก (Home)</a>
+        <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
+        <a href="Services.html" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
+        <a href="expertise.html" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
+        <a href="team.html" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">ติดต่อปรึกษาโซลูชัน</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-3">
+      <a href="Home.html" class="block font-semibold text-brand-500">หน้าหลัก (Home)</a>
+      <a href="Whyus.html" class="block text-slate-600 hover:text-slate-900">ทำไมต้องเลือกเรา (Why Us)</a>
+      <a href="Services.html" class="block text-slate-600 hover:text-slate-900">บริการของเรา (Services)</a>
+      <a href="expertise.html" class="block text-slate-600 hover:text-slate-900">ผลงานเด่น (Case Studies)</a>
+      <a href="team.html" class="block text-slate-600 hover:text-slate-900">ทีมงานของเรา (Team)</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- BREADCRUMB & HERO SECTION -->
+    <section class="pt-10 pb-16 lg:pt-14 lg:pb-24">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex justify-center items-center gap-2 text-xs font-medium text-slate-500 mb-8 animate-on-scroll">
+          <a href="Home.html" class="hover:text-slate-800 transition-colors">หน้าหลัก</a>
+          <span>&gt;</span>
+          <a href="Services.html" class="hover:text-slate-800 transition-colors">บริการของเรา</a>
+          <span>&gt;</span>
+          <span class="text-slate-900 font-semibold">ซอฟต์แวร์คัสตอม</span>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="max-w-4xl mx-auto space-y-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] animate-on-scroll">
+            รับพัฒนาเว็บไซต์และ <br class="hidden sm:block"/>
+            <span class="text-brand-500">แอปพลิเคชันแบบคัสตอม</span>
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+            เราออกแบบโซลูชันซอฟต์แวร์ที่ปลอดภัย รองรับการขยายตัวสูง และมีประสิทธิภาพเยี่ยม ปรับแต่งให้สอดคล้องกับความต้องการเฉพาะขององค์กรคุณ
+          </p>
+
+          <div class="pt-2 animate-on-scroll">
+            <a href="#contact" class="inline-block px-8 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+              ปรึกษาโปรเจคของคุณ
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard Preview Image -->
+        <div class="mt-12 sm:mt-16 animate-on-scroll">
+          <div class="relative max-w-5xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 bg-darknavy-900 group">
+            <!-- Mockup Image representing the dark analytics dashboard -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Analytics Dashboard Preview" 
+                 loading="lazy"
+                 class="w-full h-auto object-cover opacity-90 group-hover:scale-[1.01] transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-darknavy-900/40 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURE 1: SCALABLE ARCHITECTURE -->
+    <section class="py-16 lg:py-24 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Text Content -->
+          <div class="space-y-6 order-2 lg:order-1 animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              สถาปัตยกรรมที่รองรับการขยายตัว
+            </h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              ระบบของเราถูกออกแบบมาเพื่อเติบโตไปพร้อมกับธุรกิจของคุณ สามารถรองรับปริมาณการใช้งานที่เพิ่มขึ้นอย่างไร้รอยต่อ โดยไม่ลดทอนประสิทธิภาพหรือความน่าเชื่อถือ
+            </p>
+
+            <!-- Checkmark List -->
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">การติดตั้งแบบ Cloud-native บน AWS, GCP หรือ Azure</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">เชื่อมต่อ API และ Microservices อย่างราบรื่น</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">ระบบออฟไลน์เป็นหลัก (Offline-first) พร้อมการซิงก์ข้อมูล</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Feature Image (Server Racks) -->
+          <div class="order-1 lg:order-2 animate-on-scroll">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-slate-900 group">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Scalable Server Infrastructure" 
+                   loading="lazy"
+                   class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: ENTERPRISE-GRADE SECURITY -->
+    <section class="py-16 lg:py-24 bg-[#FAFAFC] border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Feature Image (Security Screen) -->
+          <div class="animate-on-scroll">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-slate-900 group">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Enterprise Security Interface" 
+                   loading="lazy"
+                   class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="space-y-6 animate-on-scroll">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              ความปลอดภัยระดับองค์กร (Enterprise-Grade)
+            </h2>
+            <p class="text-slate-600 text-base leading-relaxed">
+              เราฝังระบบรักษาความปลอดภัยไว้ในแกนหลักของแอปพลิเคชัน เพื่อให้แน่ใจว่าข้อมูลที่ละเอียดอ่อนและข้อมูลผู้ใช้ของคุณจะได้รับการปกป้องอย่างแน่นหนาจากภัยคุกคามสมัยใหม่
+            </p>
+
+            <!-- Checkmark List -->
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">ระบบตรวจสอบและคัดกรองข้อมูลรับเข้า (Input Validation) ที่รัดกุม</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">วิเคราะห์ช่องโหว่และอัปเดตแพตช์ความปลอดภัยอย่างต่อเนื่อง</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-sm sm:text-base font-medium text-slate-800">เข้ารหัสการส่งข้อมูลแบบ End-to-end (E2EE) เพื่อความปลอดภัยสูงสุด</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section class="py-20 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            เทคโนโลยีที่เราไว้วางใจ
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- React -->
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 text-center group cursor-pointer animate-on-scroll">
+            <div class="w-12 h-12 flex items-center justify-center text-brand-500 group-hover:scale-110 transition-transform">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            </div>
+            <span class="font-bold text-slate-900 text-base sm:text-lg">React</span>
+          </div>
+
+          <!-- Fastify -->
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 text-center group cursor-pointer animate-on-scroll">
+            <div class="w-12 h-12 flex items-center justify-center text-brand-500 group-hover:scale-110 transition-transform">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <span class="font-bold text-slate-900 text-base sm:text-lg">Fastify</span>
+          </div>
+
+          <!-- Docker -->
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 text-center group cursor-pointer animate-on-scroll">
+            <div class="w-12 h-12 flex items-center justify-center text-brand-500 group-hover:scale-110 transition-transform">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+            <span class="font-bold text-slate-900 text-base sm:text-lg">Docker</span>
+          </div>
+
+          <!-- PostgreSQL -->
+          <div class="bg-[#FAFAFC] rounded-2xl p-8 border border-slate-100/80 hover:border-brand-100 shadow-sm hover:shadow-brand-glow hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 text-center group cursor-pointer animate-on-scroll">
+            <div class="w-12 h-12 flex items-center justify-center text-brand-500 group-hover:scale-110 transition-transform">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+            </div>
+            <span class="font-bold text-slate-900 text-base sm:text-lg">PostgreSQL</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-darknavy-900 text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-base">C</div>
+          <span class="text-lg font-bold text-white tracking-tight">CoreCraft</span>
+        </div>
+        <p class="text-xs leading-relaxed">Crafting Core Systems for Big Business. Enterprise B2B Software House ชั้นนำของไทย</p>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริการ</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#services" class="hover:text-white">Enterprise POS</a></li>
+          <li><a href="#services" class="hover:text-white">ERP & Supply Chain</a></li>
+          <li><a href="#services" class="hover:text-white">Payment Switch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริษัท</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="Home.html" class="hover:text-white">หน้าหลัก</a></li>
+          <li><a href="Whyus.html" class="hover:text-white">ทำไมต้องเลือกเรา</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">ติดต่อเรา</h4>
+        <p class="text-xs">CoreCraft Software Co., Ltd.</p>
+        <p class="text-xs mt-1">Email: contact@corecraft.co.th</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800/80 flex justify-between text-xs text-slate-500">
+      <p>© 2026 CoreCraft Software Co., Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT FOR ANIMATIONS & MOBILE MENU -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Mobile Menu Toggle Logic
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // 2. IntersectionObserver for Smooth Scroll Fade-In & Slide-Up
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px', // ทำงานเมื่อ element เข้ามาในหน้าจอเกือบถึง 50px
+        threshold: 0.1
+      };
+
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // เติม class `.is-visible` เพื่อรัน CSS Transition
+            entry.target.classList.add('is-visible');
+            // สั่ง unobserve เพื่อให้แอนิเมชันทำงานแค่อย่างละครั้ง ไม่กระตุกซ้ำ
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // ดึงทุก element ที่ติด class .animate-on-scroll เข้าสังเกตการณ์
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      animatedElements.forEach(el => scrollObserver.observe(el));
+    });
+  </script>
+</body>
+</html>
