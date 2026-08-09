@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natthawut Laeme (Tae) — Full-Stack Developer & Security Enthusiast</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 
+            sans: ['Prompt', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          colors: {
+            brand: { 500: '#ff5500', 600: '#ea4a00' },
+            slate: { 850: '#151e2e' }
+          },
+          // เพิ่ม Custom Keyframes สำหรับเอฟเฟกต์ลอย (Floating) และพิมพ์กะพริบ (Blink)
+          keyframes: {
+            blink: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0 },
+            }
+          },
+          animation: {
+            float: 'float 4s ease-in-out infinite',
+            blink: 'blink 1s step-end infinite'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
+
+  <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../CoreCraft-Software-Front/Home.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium group">
+        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+        กลับสู่หน้า CoreCraft Team
+      </a>
+      <div class="font-mono text-xs text-slate-500">~/portfolio/tae</div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-20">
+    
+    <!-- HERO SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-up" data-aos-duration="800">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- เพิ่มคลาส animate-float ตรงนี้ครับ -->
+        <div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 relative group animate-float">
+          <div class="absolute inset-0 bg-brand-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+          <img src="https://github.com/POTAEPT.png" alt="Natthawut Laeme" class="relative z-10 w-full h-full object-cover rounded-full border-2 border-slate-700 shadow-xl">
+        </div>
+        
+        <div class="text-center md:text-left space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-brand-500 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            Ready for new challenges
+          </div>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">ณัฐวุฒิ แร่มี (เต้)</h1>
+          <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            Full-Stack Developer มีความสนใจใน Cybersecurity <br class="hidden md:block">
+            นักศึกษาจาก สาขาบูรณาการอุตสาหกรรม(DII) CAMT มหาวิทยาลัยเชียงใหม่
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-16" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Terminal Window -->
+        <div class="bg-[#0F172A] border border-[#1E293B] rounded-xl shadow-2xl overflow-hidden h-full flex flex-col">
+          <div class="bg-[#1E293B] px-4 py-2 flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <span class="ml-2 text-xs font-mono text-slate-400">tae@Ubuntu: ~</span>
+          </div>
+          <div class="p-6 font-mono text-sm leading-relaxed space-y-4 flex-grow">
+            <div>
+              <span class="text-emerald-400">tae@Ubuntu</span>:<span class="text-sky-400">~</span>$ whoami
+              <p class="text-slate-300 mt-2 min-h-[80px]">
+                <span id="typewriter-text"></span><span class="inline-block w-2 h-4 bg-slate-400 align-middle ml-1 animate-blink"></span>
+              </p>
+            </div>
+            
+            <div data-aos="fade-in" data-aos-delay="1200">
+              <span class="text-emerald-400">tae@Ubuntu</span>:<span class="text-sky-400">~</span>$ ls -la /skills
+              <ul class="text-slate-300 mt-2 list-none space-y-1">
+                <li><span class="text-brand-500">drwxr-xr-x</span> Backend (SpringBoot, PostgreSQL)</li>
+                <li><span class="text-brand-500">drwxr-xr-x</span> DevOps  (Docker, Zsh)</li>
+                <li><span class="text-brand-500">drwxr-xr-x</span> Sec     (Vulnerability Analysis)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Tags -->
+        <div class="space-y-6 flex flex-col justify-center">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            Technical Focus
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">Fastify / Express.js</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">Node.js</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">PostgreSQL</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">Docker</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">Kali Linux / Ubuntu WSL</span>
+            <span class="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-brand-500 hover:text-white transition-colors cursor-default rounded-lg text-sm font-medium text-slate-300 shadow-sm">Secure Input Validation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-16" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
+        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        Featured Projects
+      </h2>
+      
+      <div class="grid grid-cols-1 gap-6">
+        <!-- Project Card -->
+        <div class="group relative bg-slate-850 rounded-2xl border border-slate-800 hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-brand-500/10">
+          <div class="p-8 md:p-10 relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-500 transition-colors">ETHChiangmai Hackathon (Team UIA)</h3>
+              <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono rounded-full border border-emerald-500/20">Hackathon</span>
+            </div>
+            <p class="text-slate-400 leading-relaxed text-sm md:text-base mb-6">
+              พัฒนาระบบ Offline-first Architecture ที่ออกแบบมาเพื่อการส่งผ่านข้อมูลฉุกเฉิน (SOS Data) ผ่านเครือข่าย Mesh Networks โดยลดการพึ่งพาโครงสร้างอินเทอร์เน็ตส่วนกลาง เน้นความเสถียรและความปลอดภัยในการรับส่งข้อมูล
+            </p>
+            <div class="flex gap-3">
+              <span class="text-xs font-mono text-slate-500">React</span>
+              <span class="text-xs font-mono text-slate-500">Fastify</span>
+              <span class="text-xs font-mono text-slate-500">Mesh Network</span>
+            </div>
+          </div>
+          <!-- แสงตกกระทบตอน Hover -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-brand-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute -bottom-1 -inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center" data-aos="fade-up" data-aos-duration="800">
+      <div class="bg-slate-800/30 rounded-3xl border border-slate-800 p-10 md:p-16 hover:border-slate-700 transition-colors">
+        <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+          หากคุณสนใจพูดคุยเกี่ยวกับการพัฒนาระบบ Backend, Web Application Security หรือต้องการแลกเปลี่ยนไอเดียด้านเทคโนโลยี สามารถติดต่อผมได้เลยครับ
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <!-- GitHub Link -->
+          <a href="https://github.com/POTAEPT" target="_blank" rel="noopener noreferrer" 
+             class="flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white hover:bg-slate-700 hover:scale-105 transition-all w-full sm:w-auto justify-center shadow-lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+            GitHub
+          </a>
+          
+          <button id="contact-btn" 
+             class="flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 text-white font-semibold hover:bg-brand-600 hover:scale-105 transition-all shadow-lg shadow-brand-500/20 w-full sm:w-auto justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Send Email
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Scroll Animations
+      AOS.init({ once: true, offset: 50 });
+
+      // 2. Typewriter Effect Logic (จำลองการพิมพ์บน Terminal)
+      const textToType = "มีความสนใจในการสร้าง Web Application ที่เน้นความปลอดภัยระดับโครงสร้าง ชอบทำความเข้าใจ Logic ของ Code และใช้เวลาส่วนใหญ่ทดสอบระบบผ่าน Terminal (Zsh) รวมถึงทำแล็บด้าน Security บน Kali Linux เพื่อฝึกฝนการทำ Vulnerability Analysis";
+      const typeTarget = document.getElementById('typewriter-text');
+      let i = 0;
+      const speed = 25; // ความเร็วในการพิมพ์ (มิลลิวินาที)
+
+      // เช็คว่าเลื่อนจอมาถึง Section Terminal หรือยัง ค่อยเริ่มพิมพ์
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          typeWriter();
+          observer.disconnect();
+        }
+      }, { threshold: 0.5 });
+      
+      observer.observe(document.getElementById('typewriter-text'));
+
+      function typeWriter() {
+        if (i < textToType.length) {
+          typeTarget.textContent += textToType.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      // 3. Email Obfuscation
+      const contactBtn = document.getElementById('contact-btn');
+      if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+          const user = "natthawutlaeme";
+          const domain = "gmail.com";
+          window.location.href = `mailto:${user}@${domain}`;
+        });
+      }
+    });
+  </script>
+</body>
+</html>

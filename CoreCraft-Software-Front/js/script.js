@@ -33,4 +33,77 @@ tailwind.config = {
   }
 };
 
-console.log("CoreCraft Software : Design System Synced");
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  fetch('components/header.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.text();
+    })
+    .then(htmlData => {
+      document.getElementById('navbar-placeholder').innerHTML = htmlData;
+      
+      setActiveNavLink();
+      initMobileMenu();
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+});
+
+
+function setActiveNavLink() {
+  // ดึงชื่อไฟล์จาก URL ปัจจุบัน
+  const currentPath = window.location.pathname;
+  let currentPage = currentPath.split('/').pop(); 
+  
+  if (currentPage === '') currentPage = 'Home.html';
+
+  const servicePages = [
+    'Services.html',
+    'WebCustom.html',
+    'ServiceMobile.html',
+    'ServiceEnterprise.html',
+    'ServiceCloud.html'
+  ];
+
+
+  const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    let isActive = false;
+
+    if (linkHref === currentPage) {
+      isActive = true;
+    } 
+    else if (linkHref === 'Services.html' && servicePages.includes(currentPage)) {
+      isActive = true;
+    }
+    if (isActive) {
+      link.classList.remove('text-slate-600', 'hover:text-slate-900');
+      link.classList.add('text-brand-500', 'font-semibold');
+    }
+  });
+}
+
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+}

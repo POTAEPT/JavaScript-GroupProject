@@ -50,46 +50,7 @@
 <body class="bg-[#FAFAFC] text-slate-700 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden">
 
   <!-- HEADER NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="Home.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">C</div>
-        <div class="flex flex-col">
-          <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">CoreCraft</span>
-          <span class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">Software House</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="Home.html" class="text-brand-500 font-semibold">หน้าหลัก (Home)</a>
-        <a href="Whyus.html" class="hover:text-slate-900 transition-colors">ทำไมต้องเลือกเรา (Why Us)</a>
-        <a href="Services.html" class="hover:text-slate-900 transition-colors">บริการของเรา (Services)</a>
-        <a href="expertise.html" class="hover:text-slate-900 transition-colors">ผลงานเด่น (Case Studies)</a>
-        <a href="team.html" class="hover:text-slate-900 transition-colors">ทีมงานของเรา (Team)</a>
-      </nav>
-
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#contact" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">ติดต่อปรึกษาโซลูชัน</a>
-      </div>
-
-      <!-- Mobile Hamburger -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-3">
-      <a href="Home.html" class="block font-semibold text-brand-500">หน้าหลัก (Home)</a>
-      <a href="Whyus.html" class="block text-slate-600 hover:text-slate-900">ทำไมต้องเลือกเรา (Why Us)</a>
-      <a href="Services.html" class="block text-slate-600 hover:text-slate-900">บริการของเรา (Services)</a>
-      <a href="expertise.html" class="block text-slate-600 hover:text-slate-900">ผลงานเด่น (Case Studies)</a>
-      <a href="team.html" class="block text-slate-600 hover:text-slate-900">ทีมงานของเรา (Team)</a>
-    </div>
-  </header>
+  <div id="navbar-placeholder"></div>
 
   <main class="flex-grow">
 
@@ -290,40 +251,9 @@
 
 
   <!-- FOOTER -->
-  <footer id="contact" class="bg-darknavy-900 text-slate-400 py-16 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-      <div class="space-y-4">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-base">C</div>
-          <span class="text-lg font-bold text-white tracking-tight">CoreCraft</span>
-        </div>
-        <p class="text-xs leading-relaxed">Crafting Core Systems for Big Business. Enterprise B2B Software House ชั้นนำของไทย</p>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริการ</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#services" class="hover:text-white">Enterprise POS</a></li>
-          <li><a href="#services" class="hover:text-white">ERP & Supply Chain</a></li>
-          <li><a href="#services" class="hover:text-white">Payment Switch</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">บริษัท</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="Home.html" class="hover:text-white">หน้าหลัก</a></li>
-          <li><a href="Whyus.html" class="hover:text-white">ทำไมต้องเลือกเรา</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white text-xs font-semibold mb-4 uppercase tracking-wider">ติดต่อเรา</h4>
-        <p class="text-xs">CoreCraft Software Co., Ltd.</p>
-        <p class="text-xs mt-1">Email: contact@corecraft.co.th</p>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800/80 flex justify-between text-xs text-slate-500">
-      <p>© 2026 CoreCraft Software Co., Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <script src="js/script.js"></script>
 
   <!-- JAVASCRIPT FOR ANIMATIONS & MOBILE MENU -->
   <script>
